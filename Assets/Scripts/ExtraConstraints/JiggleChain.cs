@@ -297,14 +297,14 @@ public class JiggleChainBinder : AnimationJobBinder<JiggleChainJob, JiggleChainD
         }
         
         // Bind dynamic properties
-        job.massProperty          = FloatProperty.Bind(animator, component, PropertyUtils.ConstructConstraintDataPropertyName(nameof(data.mass)));
-        job.stiffnessProperty     = FloatProperty.Bind(animator, component, PropertyUtils.ConstructConstraintDataPropertyName(nameof(data.stiffness)));
-        job.dynamicOffsetProperty = FloatProperty.Bind(animator, component, PropertyUtils.ConstructConstraintDataPropertyName(nameof(data.dynamicOffset)));
-        job.rollEnabledProperty   = BoolProperty.Bind(animator, component, PropertyUtils.ConstructConstraintDataPropertyName(nameof(data.rollEnabled)));
-        job.gravityProperty       = Vector3Property.Bind(animator, component, PropertyUtils.ConstructConstraintDataPropertyName(nameof(data.gravity)));
-        job.externalForceProperty = Vector3Property.Bind(animator, component, PropertyUtils.ConstructConstraintDataPropertyName(nameof(data.externalForce)));
-        job.motionDecayProperty   = FloatProperty.Bind(animator, component, PropertyUtils.ConstructConstraintDataPropertyName(nameof(data.motionDecay)));
-        job.dampingProperty       = FloatProperty.Bind(animator, component, PropertyUtils.ConstructConstraintDataPropertyName(nameof(data.damping)));
+        job.massProperty          = FloatProperty.Bind(animator, component, ConstraintsUtils.ConstructConstraintDataPropertyName(nameof(data.mass)));
+        job.stiffnessProperty     = FloatProperty.Bind(animator, component, ConstraintsUtils.ConstructConstraintDataPropertyName(nameof(data.stiffness)));
+        job.dynamicOffsetProperty = FloatProperty.Bind(animator, component, ConstraintsUtils.ConstructConstraintDataPropertyName(nameof(data.dynamicOffset)));
+        job.rollEnabledProperty   = BoolProperty.Bind(animator, component, ConstraintsUtils.ConstructConstraintDataPropertyName(nameof(data.rollEnabled)));
+        job.gravityProperty       = Vector3Property.Bind(animator, component, ConstraintsUtils.ConstructConstraintDataPropertyName(nameof(data.gravity)));
+        job.externalForceProperty = Vector3Property.Bind(animator, component, ConstraintsUtils.ConstructConstraintDataPropertyName(nameof(data.externalForce)));
+        job.motionDecayProperty   = FloatProperty.Bind(animator, component, ConstraintsUtils.ConstructConstraintDataPropertyName(nameof(data.motionDecay)));
+        job.dampingProperty       = FloatProperty.Bind(animator, component, ConstraintsUtils.ConstructConstraintDataPropertyName(nameof(data.damping)));
 
         return job;
     }
